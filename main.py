@@ -38,8 +38,7 @@ class Main:
         pyxel.init(
             common.WINDOW_WIDTH,
             common.WINDOW_HEIGHT,
-            caption="PyxPrime",
-            fps=common.FPS,
+            title="PyxPrime",
         )
         pyxel.load("assets/pyxprime.pyxres")
         pyxel.run(self.update, self.draw)
@@ -86,7 +85,7 @@ class Main:
             if pyxel.btnp(pyxel.KEY_BACKSPACE):
                 # BSキーで直前に入力した数字を消去
                 self.answer_list = self.answer_list[0:-1]
-            if pyxel.btnp(pyxel.KEY_ENTER):
+            if pyxel.btnp(pyxel.KEY_RETURN):
                 # 割り算の実行
                 if self.calc():
                     self.score += 1
